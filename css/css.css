@@ -1,0 +1,572 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --text-color: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.boxcenter {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.row2 {
+  float: left;
+  width: 100%;
+}
+
+.mb {
+  margin-bottom: 30px;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+/* CSS CHO PHẦN HEADER */
+.header {
+  background: #83d083;
+  font-size: 16px;
+  padding: 20px;
+  height: 80px;
+  color: rgb(58, 119, 58);
+}
+
+.menu {
+  background: black;
+  border: 1px solid #000;
+  padding: 5px;
+  height: 50px;
+
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+.menu li a {
+  color: rgb(166, 157, 157);
+  text-decoration: none;
+}
+
+.menu li a:hover,
+.dropdown:hover .dropbtn {
+  padding: 13px 0;
+  color: white;
+}
+
+.dropdown_content {
+  display: none;
+  position: absolute;
+  background-color: #98FB98;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+
+}
+
+.dropdown_content a:hover {
+  background-color: #98FB98;
+}
+
+.dropdown:hover .dropdown_content {
+  display: block;
+  margin-top: 13px;
+}
+
+/* css cho phần nội dung */
+.catalog {
+  display: flex;
+  gap: 30px;
+}
+
+.boxleft {
+  width: 75%;
+}
+
+.boxright {
+
+  width: 25%;
+}
+
+.box_title {
+  display: flex;
+  background: #8e8a8aee;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  padding: 15px 10px;
+  color: #333;
+  /* align-items: center; */
+  font-size: 20px;
+
+}
+
+.account input {
+  outline: none;
+}
+
+.box_content {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-height: 200px;
+  padding: 20px;
+}
+
+.box_content2 {
+  padding: 20px;
+  background: #EEEE;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  min-height: 200px;
+
+}
+
+.box_content .imgct {
+  text-align: center;
+}
+
+.banner {
+  width: 100%;
+  min-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  height: 400px;
+}
+
+.pre,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 39%;
+  width: auto;
+  margin: 15px;
+  padding: 15px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease-in-out;
+  border-radius: 8px;
+  border: none;
+
+}
+
+.pre:hover,
+.next:hover {
+  background-color: rgba(117, 105, 108, 0.8);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.pre {
+  left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.items {
+  width: 100%;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.box_items_home {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.box_items {
+  border: 1px solid #979494ee;
+  border-radius: 5px;
+  text-align: center;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+.box_items img {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.box_items a {
+  text-decoration: none;
+  color: black;
+}
+
+.box_items .item_name {
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+.box_items .price {
+  margin: 10px 0;
+  color: red;
+  font-weight: 500;
+}
+
+.box_items:hover .add input[type="submit"] {
+  bottom: 0;
+  cursor: pointer;
+}
+
+.add>form {
+  position: relative;
+  height: 35px;
+}
+
+.box_items .add input[type="submit"] {
+  transition: 0.2s;
+  position: absolute;
+  bottom: -105%;
+  left: 0;
+  padding: 10px;
+  background-color: rgb(65, 198, 156);
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.box_items .add input[type="submit"] {
+  padding: 8px 10px;
+  border: none;
+  width: 100%;
+  background-color: rgb(168, 255, 168);
+  border-radius: 5px;
+}
+
+.dki_quenmk {
+  margin: 10px 0;
+}
+
+.form_li a {
+  text-decoration: none;
+  color: rgb(81, 117, 224);
+}
+
+.form_li a:hover {
+  color: red;
+}
+
+.form_li {
+  list-style: none;
+}
+
+.form_account {
+  line-height: 150%;
+}
+
+.form_account input[type="email"],
+.form_account input[type="text"],
+.form_account input[type="password"],
+.form_content input[type="text"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin-bottom: 12px;
+  outline: none;
+}
+
+.form_account input[type="checkbox"] {
+  border-radius: 5px;
+  margin: 20px 0;
+}
+
+.form_account input[type="reset"],
+.form_account input[type="submit"],
+.form_content input[type="submit"],
+.form_content input[type="reset"],
+.form_content input[type="button"] {
+  padding: 10px;
+  background: white;
+  border: 1px solid #CCC;
+  border-radius: 5px;
+}
+
+.form_account input[type="submit"]:hover,
+.form_content input[type="submit"]:hover,
+.form_content input[type="reset"]:hover,
+.form_content input[type="button"]:hover {
+  background: #CCC;
+}
+
+/*  CSS CHO PHẦN DANH MỤC */
+.product_portfolio ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+
+.product_portfolio ul li {
+  padding: 10px 20px;
+  background-color: #EEEE;
+  border-bottom: 1px #ccc solid;
+}
+
+.product_portfolio ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.product_portfolio ul li:hover {
+
+  background-color: #CCC;
+}
+
+.box_search input {
+  width: 100%;
+  padding: 15px 9px;
+  background-color: #ffff;
+  border: 1px #ccc solid;
+  border-radius: 5px;
+  outline: none;
+}
+
+.selling_products {
+  display: flex;
+  margin: 7px;
+  align-items: center;
+}
+
+.selling_products img {
+  width: 20%;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.selling_products a {
+  color: black;
+  text-decoration: none;
+}
+
+.selling_products a:hover {
+  color: red;
+}
+
+.banner2 img {
+  width: 60%;
+}
+
+/* CSS CHO ADMIN */
+.header_admin {
+  background-color: #EEE;
+  border: 1px #CCC solid;
+  color: #666;
+  border-radius: 5px;
+  padding: 10px 20px;
+
+}
+
+.header_admin h1 {
+  font-size: 2vv;
+}
+
+.font_title {
+  background-color: #EEE;
+  border: 1px #CCC solid;
+  color: #666;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.mr20 {
+  margin-right: 10px;
+}
+
+label {
+  display: flex;
+  justify-content: start;
+  font-size: 20px;
+  margin-top: 10px;
+  color: black;
+}
+
+.formds_loai table {
+  width: 100%;
+  /* border-collapse: collapse; */
+  background-color: #ccc;
+  padding: 20px;
+
+}
+
+.listsp table tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+.formds_loai table td {
+  padding: 10px 20px;
+  border: 1px #ccc solid;
+  padding: 20px 0;
+  text-align: center;
+}
+
+/* footer section starts */
+.box_footer {
+  width: 100%;
+  height: 70px;
+  color: rgb(11, 52, 11);
+  background-color: rgb(134, 193, 134);
+  margin-top: 20px;
+  border-radius: 3px;
+}
+
+.chitietsanpham_view {
+  width: 100%;
+  margin: 0;
+}
+
+.chitietsanpham_view tr {
+  display: flex;
+}
+
+.chitietsanpham_view tr td {
+  width: 30%;
+  margin: 15px 0;
+  text-align: center;
+}
+
+textarea {
+  outline: none;
+  padding: 10px 10px;
+}
+
+select {
+  padding: 10px 10px;
+  border-radius: 8px;
+  margin-right: 15px;
+}
+
+.form_search input {
+  padding: 10px;
+  margin-right: 15px;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid black;
+}
+
+.spct {
+  display: flex;
+  justify-content: space-around;
+  /* align-content: space-between; */
+}
+
+.thongbao {
+  color: green;
+  margin: 15px 0;
+}
+
+.chitietsanpham_view tr {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.listdm tr {
+  display: flex;
+  justify-content: space-around;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex input {
+  margin-right: 25px;
+}
+
+.phuongthuctht {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.phuongthuctht div input {
+  margin-right: 12px;
+}
+
+.giohang {
+  width: 100%;
+  text-align: center;
+}
+
+.giohang tr {
+  height: 50px;
+}
+
+.view_a {
+  padding: 20px;
+}
+
+.view_a a {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid black;
+  text-decoration: none;
+  color: black;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+label.error {
+  color: red;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
